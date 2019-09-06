@@ -1,0 +1,109 @@
+/**index.wxss**/
+
+.container {
+  padding: 0 35rpx;
+}
+
+.content {
+}
+
+.header {
+  margin-bottom: 40rpx;
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  width: 100%;
+  height: 2rpx;
+  background-color: #666;
+  position: absolute;
+  bottom: -16rpx;
+}
+
+.header .nav {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.header .nav .nav-item {
+  padding: 5rpx 15rpx;
+  margin-right: 10rpx;
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.header .nav-item.active {
+  background-color: #1890ff;
+  color: #fff;
+  border-radius: 4rpx;
+}
+
+.topic-item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 38rpx;
+}
+
+.topic-item .avatar {
+  width: 75rpx;
+  height: 75rpx;
+  /* align-self: center; */
+  margin-top: 20rpx;
+  padding-right: 12rpx;
+}
+
+.topic-item .avatar image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.topic-item .info-wrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.topic-item .info-wrap .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+.topic-item .info-wrap .info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 26rpx;
+  padding: 6rpx 0;
+  color: #666;
+}
+
+.topic-item .info-wrap .info .node {
+  background-color: #ddd;
+  padding: 8rpx;
+  width: auto;
+  white-space: nowrap;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+
+.topic-item .info-wrap .info .username {
+  margin-right: 20rpx;
+}
+
+.topic-item .info-wrap .info .date {
+}
+
+.topic-item .replies {
+  font-size: 26rpx;
+  color: #fff;
+  background-color: #ccc;
+  height: 30rpx;
+  padding: 5rpx 20rpx;
+  margin-left: 10rpx;
+  border-radius: 30rpx;
+  line-height: 30rpx;
+}

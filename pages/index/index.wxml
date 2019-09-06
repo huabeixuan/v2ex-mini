@@ -1,0 +1,29 @@
+<!-- index.wxml -->
+<view class="container">
+  <scroll-view scroll-x class="header">
+    <view class="nav">
+      <view wx:for="{{hotNodes}}" bindtap="tapNav" data-name="{{item.short_name}}" wx:key="{{item.short_name}}" class="nav-item+{{item.short_name===active?' active':''}}">
+        {{item.full_name}}
+      </view>
+    </view>
+  </scroll-view>
+  <scroll-view wx:if="{{topics.length}}" scroll-y class="content">
+    <view wx:for="{{topics}}" wx:key="{{item.id}}" class="topic-item">
+      <view class="avatar">
+        <image src="{{'https:'+item.member.avatar_mini}}"></image>
+      </view>
+      <view class="info-wrap">
+        <view data-topic="{{item}}" data-id="{{item.id}}" bindtap="navToTopic" class="title">
+          {{item.title}}
+        </view>
+        <view class="info">
+          <view class="node">{{item.node.title}}</view>
+          <view class="username">{{item.member.username}}</view>
+          <view class="date">{{item.last_touched}}</view>
+        </view>
+      </view>
+      <view class="replies">{{item.replies}}</view>
+    </view>
+  </scroll-view>
+  <mp-loading wx:else type="circle"></mp-loading>
+</view>

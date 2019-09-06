@@ -1,0 +1,45 @@
+<!--pages/topic/topic.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="user-wrap">
+      <view class="user-left">
+        <view class="avatar">
+          <image src="{{topic.member.avatar_normal}}"></image>
+        </view>
+        <view class="user">
+          <view class="name">{{topic.member.username}}</view>
+          <view class="created">{{topic.created}}</view>
+        </view>
+      </view>
+      <view class="node">{{topic.node.title}}</view>
+    </view>
+    <view class="title">{{topic.title}}</view>
+  </view>
+  <view class="content-wrap">
+    <rich-text nodes="{{nodes}}"></rich-text>
+    <view class="topic-info">
+      <view class="replies-num">{{topic.replies}} 回复</view>
+      <view class="divide">|</view>
+      <view class="latest">{{topic.last_touched}}</view>
+    </view>
+  </view>
+  <view class="divide-line"></view>
+  <view class="replies">
+    <view wx:for="{{replies}}" wx:key="{{item.id}}" class="replies-item">
+      <view class="user-wrap">
+        <view class="avatar">
+          <image src="{{item.member.avatar_normal}}"></image>
+        </view>
+        <view class="user">
+          <view class="name">{{item.member.username}}</view>
+          <view class="info">
+            <view class="floor">{{index+1}} 楼</view>
+            <view class="created">{{item.created}}</view>
+          </view>
+        </view>
+      </view>
+      <rich-text nodes="{{item.content_rendered}}" class="content"></rich-text>
+       <view class="divide-line"></view>
+    </view>
+  </view>
+</view>

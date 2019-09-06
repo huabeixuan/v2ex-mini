@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/nodes/nodes",
+    "pages/topic/topic"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "selectedColor": "#3a86b9",
+    "color": "#b8b8b8",
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text": "主题",
+        "iconPath": "images/资讯.png",
+        "selectedIconPath": "images/资讯_填充.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "节点",
+        "iconPath": "images/分类.png",
+        "selectedIconPath": "images/分类-选中.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

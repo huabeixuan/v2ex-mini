@@ -1,0 +1,113 @@
+/* pages/topic/topic.wxss */
+
+.divide-line {
+  margin: 16rpx 0;
+  height: 2rpx;
+  background-color: #ccc;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .user-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.header .user-wrap .user-left {
+  display: flex;
+}
+
+.header .user-left .avatar {
+  width: 75rpx;
+  height: 75rpx;
+  align-self: center;
+  padding-right: 16rpx;
+}
+
+.header .user-left .avatar image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.header .user-left .created {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.header .user-wrap .node {
+  background-color: #ddd;
+  padding: 10rpx;
+  width: auto;
+  white-space: nowrap;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.content-wrap .topic-info {
+  display: flex;
+  background-color: #ddd;
+  padding: 0 10rpx;
+  margin: 20rpx 0 10rpx 0;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.content-wrap .topic-info .divide {
+  padding: 0 16rpx;
+}
+
+/* 回复 */
+
+.replies {
+}
+
+.replies .replies-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.replies .user-wrap {
+  display: flex;
+}
+
+.replies .user-wrap .avatar {
+  width: 75rpx;
+  height: 75rpx;
+  align-self: center;
+  padding-right: 16rpx;
+}
+
+.replies .avatar image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.replies .user-wrap .user {
+}
+
+.replies .user-wrap .info {
+  display: flex;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.replies .user-wrap .floor {
+  padding-right: 16rpx;
+}
+
+.replies .content {
+  padding: 16rpx 0;
+}
