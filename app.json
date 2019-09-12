@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/nodes/nodes",
-    "pages/topic/topic"
+    "pages/topic/topic",
+    "pages/nodedetail/nodedetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,7 +22,7 @@
         "selectedIconPath": "images/资讯_填充.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/nodes/nodes",
         "text": "节点",
         "iconPath": "images/分类.png",
         "selectedIconPath": "images/分类-选中.png"

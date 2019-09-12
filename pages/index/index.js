@@ -2,6 +2,7 @@
 //获取应用实例
 var v2ex = require('../../utils/api.js')
 var util = require('../../utils/util.js')
+const moment = require('../../utils/moment-with-locales.min')
 const app = getApp()
 
 Page({
@@ -48,7 +49,7 @@ Page({
       success: res => {
         console.log(res.data)
         res.data.forEach(e => {
-          e.last_touched = util.formatTime(new Date(Number(e.last_touched + '000')))
+          e.last_touched = moment.unix(e.last_touched).fromNow()
         })
         this.setData({
           topics: res.data
@@ -62,7 +63,7 @@ Page({
       success: res => {
         console.log(res.data)
         res.data.forEach(e => {
-          e.last_touched = util.formatTime(new Date(Number(e.last_touched + '000')))
+          e.last_touched = moment.unix(e.last_touched).fromNow()
         })
         this.setData({
           topics: res.data
@@ -75,7 +76,7 @@ Page({
       url: v2ex.getTopicInfo(data),
       success: res => {
         res.data.forEach(e => {
-          e.last_touched = util.formatTime(new Date(Number(e.last_touched + '000')))
+          e.last_touched = moment.unix(e.last_touched).fromNow()
         })
         this.setData({
           topics: res.data
@@ -101,6 +102,10 @@ Page({
     this.setData({
       active: name
     })
+  },
+
+  handleScroll(event) {
+    console.log(event)
   },
 
   // 主题点击事件 
@@ -132,6 +137,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    console.log(options)
     this.fetchLatest()
   },
   /**

@@ -4,41 +4,6 @@
   padding: 0 35rpx;
 }
 
-.header {
-  padding-bottom: 16rpx;
-  z-index: 100;
-  background-color: #fff;
-  position: fixed;
-}
-
-.header::after {
-  content: "";
-  width: 100%;
-  height: 2rpx;
-  background-color: #666;
-  position: absolute;
-  bottom: 0rpx;
-}
-
-.header .nav {
-  overflow-x: scroll;
-  white-space: nowrap;
-}
-
-.header .nav .nav-item {
-  padding: 5rpx 15rpx;
-  margin-right: 10rpx;
-  width: auto;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.header .nav-item.active {
-  background-color: #1890ff;
-  color: #fff;
-  border-radius: 4rpx;
-}
-
 .topic-item {
   display: flex;
   margin-top: 100rpx;
@@ -75,7 +40,6 @@
 .topic-item .info-wrap .info {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   font-size: 26rpx;
   padding: 6rpx 0;
@@ -99,8 +63,6 @@
 .topic-item .info-wrap .info .username {
   margin-right: 20rpx;
 }
-
-
 
 .topic-item .replies {
   font-size: 26rpx;

@@ -1,13 +1,5 @@
-<!-- index.wxml -->
 <view class="container">
-  <scroll-view scroll-x class="header">
-    <view class="nav">
-      <view wx:for="{{hotNodes}}" bindtap="tapNav" data-name="{{item.short_name}}" wx:key="{{item.short_name}}" class="nav-item+{{item.short_name===active?' active':''}}">
-        {{item.full_name}}
-      </view>
-    </view>
-  </scroll-view>
-  <scroll-view enable-back-to-top bindscroll="handleScroll" wx:if="{{topics.length}}" scroll-y class="content">
+  <view wx:if="{{topics.length}}" class="content">
     <view wx:for="{{topics}}" wx:key="{{item.id}}" class="topic-item">
       <view class="avatar">
         <image src="{{'https:'+item.member.avatar_mini}}"></image>
@@ -18,7 +10,9 @@
         </view>
         <view class="info">
           <view class="left">
-          <navigator url="/pages/nodedetail/nodedetail?title={{item.node.name}}&name={{item.node.title}}" class="node">{{item.node.title}}</navigator>
+          <navigator url="/pages/nodedetail/nodedetail?title={{item.node.name}}&name={{item.node.title}}" class="node">
+            {{item.node.title}}
+          </navigator>
           <view class="username">{{item.member.username}}</view>
           </view>
           <view class="date">{{item.last_touched}}</view>
@@ -26,6 +20,6 @@
       </view>
       <view class="replies">{{item.replies}}</view>
     </view>
-  </scroll-view>
+  </view>
   <mp-loading wx:else type="circle"></mp-loading>
 </view>

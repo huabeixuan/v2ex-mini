@@ -1,2 +1,12 @@
-<!--pages/nodes/nodes.wxml-->
-<text>pages/nodes/nodes.wxml</text>
+<!-- pages/nodes/nodes.wxml -->
+<view class="container">
+  <view class="node-wrap">
+    <view wx:for="{{nodeList}}" wx:key="{{item.title}}" class="node-type">
+      <view class="title">{{item.title}}</view>
+      <view  class="item-wrap">
+        <navigator  url="/pages/nodedetail/nodedetail?title={{nodes.short_name}}&name={{nodes.full_name}}" wx:for="{{item.nodes}}" wx:for-item="nodes" wx:key="{{nodes.short_name}}" class="item">
+        {{nodes.full_name}}</navigator>
+      </view>
+    </view>
+  </view>
+</view>

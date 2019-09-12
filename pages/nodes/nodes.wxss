@@ -1,1 +1,21 @@
 /* pages/nodes/nodes.wxss */
+/* .node-wrap {}
+
+.node-wrap .node-type {} */
+
+.node-wrap .node-type .title {
+  background-color: #ddd;
+  line-height: 2;
+  padding: 0 35rpx;
+  margin: 10rpx -35rpx;
+}
+
+.node-wrap .node-type .item-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.node-wrap .item-wrap .item {
+  margin: 0 20px 10rpx 0;
+
+}
